@@ -41,18 +41,17 @@ syn keyword tassFunction
   \ repr round sign sin sinh size sort sqrt tan tanh trunc
 
 syn keyword tassDirective
-  \ .addr .al .align .as .assert .autsiz .bend .bfor .binary .binclude
-  \ .block .break .breakif .brept .bwhile .byte .case .cdef .cerror
-  \ .char .check .comment .continue .continueif .cpu .cwarn .databank
-  \ .default .dint .dpage .dsection .dstruct .dunion .dword .edef
-  \ .else .elsif .enc .end .endc .endf .endif .endm .endn .endp
-  \ .ends .endswitch .endu .endv .endweak .endwith .eor .error .fi
-  \ .fill .for .function .goto .here .hidemac .if .ifeq .ifmi .ifne
-  \ .ifpl .include .lbl .lint .logical .long .macro .mansiz .namespace
-  \ .next .null .offs .option .page .pend .proc .proff .pron .ptext
-  \ .rept .rta .section .seed .segment .send .shift .shiftl .showmac
-  \ .sint .struct .switch .text .union .var .virtual .warn .weak
-  \ .while .with .word .xl .xs
+  \ addr al align as assert autsiz bend bfor binary binclude block
+  \ break breakif brept bwhile byte case cdef cerror char check
+  \ comment continue continueif cpu cwarn databank default dint
+  \ dpage dsection dstruct dunion dword edef else elsif enc end
+  \ endc endf endif endm endn endp ends endswitch endu endv endweak
+  \ endwith eor error fi fill for function goto here hidemac if
+  \ ifeq ifmi ifne ifpl include lbl lint logical long macro mansiz
+  \ namespace next null offs option page pend proc proff pron ptext
+  \ rept rta section seed segment send shift shiftl showmac sint
+  \ struct switch text union var virtual warn weak while with word
+  \ xl xs
 
 
 syn match tassMacro	"\.macro"

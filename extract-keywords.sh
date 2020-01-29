@@ -66,7 +66,7 @@ awk '
 	END {
 		printf("syn keyword tassDirective\n");
 		for (i in keywords) {
-			line = sprintf("%s .%s", line, keywords[i]);
+			line = sprintf("%s %s", line, keywords[i]);
 			if (length(line) >= 60) {
 				printf("  \\%s\n", line);
 				line = "";
