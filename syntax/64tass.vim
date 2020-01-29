@@ -107,5 +107,5 @@ hi link hexNumber      Number
 
 hi Comment cterm=italic gui=italic
 
-let b:current_syntax = "asm6502"
+let b:current_syntax = "64tass"
 
