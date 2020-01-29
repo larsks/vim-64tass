@@ -1,17 +1,17 @@
 #!/bin/sh
+#
+# usage: gen_vim_syntax.sh /path/to/tass64-code
 
-# Run this inside the tass64 source directory.
+if [ ! -d "$1" ]; then
+	echo "ERROR: \"$1\" does not exist or is not a directory" >&2
+	exit 1
+fi
 
-tmpfile=$(mktemp syntaxXXXXXX)
-trap "rm -f $tmpfile" EXIT
-
-(cd "$1" && sh) < extract-keywords.sh > $tmpfile
-
-cp $tmpfile foo.txt
+(cd "$1" && sh) < extract-keywords.sh > keywords.vim
 
 sed '
-	/@TASS64_KEYWORDS@/ {
-		r '"$tmpfile"'
+	/@TASS_KEYWORDS@/ {
+		r keywords.vim
 		d
 	}
-' < tass64.vim.in > tass64.vim
+' < 64tass.vim.in
